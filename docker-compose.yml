@@ -1,0 +1,57 @@
+version: "3"
+services:
+   # test:
+   #    image: mcr.microsoft.com/dotnet/sdk:8.0
+   #    volumes:
+   #       - "./Main:/src/"
+   #    command: tail -f /dev/null
+   webapi:
+      build:
+         context: ./Main
+         dockerfile: Dockerfile
+      container_name: ${APPName}_webapi      
+      depends_on:
+         database:
+            condition: service_healthy
+      restart: on-failure
+      environment:
+         - ASPNETCORE_ENVIRONMENT=DevelopmentDocker
+         - ASPNETCORE_URLS=https://+:44358;http://+:30358
+         - ASPNETCORE_HTTPS_PORT=44358
+         - ASPNETCORE_Kestrel__Certificates__Default__Password=password!
+         - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/cert.pfx
+      volumes:
+         - ~/.aspnet/https:/https:ro
+      ports:
+         - 30358:30358
+         - 44358:44358
+      networks:
+         - front-tier
+         - back-tier
+      tty: true
+   database:
+      image: "mcr.microsoft.com/mssql/server"
+      container_name: ${APPName}_database
+      user: root
+      hostname: database
+      volumes:
+         - ./Database/SQLServer/data:/var/opt/mssql/data
+         - ./Database/SQLServer/log:/var/opt/mssql/log
+         - ./Database/SQLServer/secrets:/var/opt/mssql/secrets
+      environment:
+         SA_PASSWORD: ${DBPassword}
+         ACCEPT_EULA: "Y"
+      restart: unless-stopped
+      healthcheck:
+         test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$$SA_PASSWORD" -Q "SELECT 1" || exit 1
+         interval: 10s
+         timeout: 3s
+         retries: 10
+         start_period: 10s
+      ports:
+         - "11433:1433"
+      networks:
+         - back-tier
+networks:
+   front-tier:
+   back-tier:

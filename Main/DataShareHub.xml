@@ -1,0 +1,1689 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataShareHub</name>
+    </assembly>
+    <members>
+        <member name="P:Main.Api.GraphQL.CountyQL.QL_County.Name">
+            <summary>
+            名稱
+            </summary>  
+        </member>
+        <member name="P:Main.Api.GraphQL.CountyQL.QL_County.CountyID">
+            <summary>
+            縣市代號
+            </summary> 
+        </member>
+        <member name="P:Main.Api.GraphQL.CountyQL.QL_County.CountyCode">
+            <summary>
+            縣市代碼
+            </summary>    
+        </member>
+        <member name="P:Main.Api.GraphQL.CountyQL.QL_Town.Name">
+            <summary>
+            名稱
+            </summary>   
+        </member>
+        <member name="P:Main.Api.GraphQL.CountyQL.QL_Town.TownID">
+            <summary>
+            鄉鎮市區代號
+            </summary>   
+        </member>
+        <member name="P:Main.Api.GraphQL.CountyQL.QL_Town.TownCode">
+            <summary>
+            鄉鎮市區代碼
+            </summary>  
+        </member>
+        <member name="P:Main.Services.BankApiDataModel.BankNo.BankCode">
+            <summary>
+            銀行代號
+            </summary>
+        </member>
+        <member name="P:Main.Services.BankApiDataModel.BankNo.BranchCode">
+            <summary>
+            分支機構代號
+            </summary>
+        </member>
+        <member name="P:Main.Services.BankApiDataModel.BankNo.BankName">
+            <summary>
+            金融機構名稱
+            </summary>
+        </member>
+        <member name="P:Main.Services.BankApiDataModel.BankNo.BranchName">
+            <summary>
+            分支機構名稱
+            </summary>
+        </member>
+        <member name="P:Main.Services.BankApiDataModel.BankNo.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="F:Main.Services.BankApiDataModel.BankNo.ColTypeEnum.BankInfo">
+            <summary>
+            銀行資訊
+            </summary>
+        </member>
+        <member name="F:Main.Services.BankApiDataModel.BankNo.ColTypeEnum.SubBankInfo">
+            <summary>
+            分行資訊
+            </summary>
+        </member>
+        <member name="T:Main.Services.BankNoMap">
+            <summary>
+            https://joshclose.github.io/CsvHelper/examples/configuration/class-maps/ignoring-properties/
+            </summary>
+        </member>
+        <member name="T:Main.Services.BankApiDataService">
+            <summary>
+            使用API取得資料，並更新到資料庫
+            </summary>
+        </member>
+        <member name="M:Main.Services.BankApiDataService.GetBankInfoAsync">
+            <summary>
+            通過API取得銀行資訊CSV
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Main.Services.BankApiDataService.GetCSVDataAsync(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            讀取CSV資料，並轉為Model
+            </summary>
+            <param name="resp"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_County.Name">
+            <summary>
+            名稱
+            </summary>  
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_County.CountyID">
+            <summary>
+            縣市代號
+            </summary> 
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_County.CountyCode">
+            <summary>
+            縣市代碼
+            </summary>    
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_Town.Name">
+            <summary>
+            名稱
+            </summary>   
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_Town.TownID">
+            <summary>
+            鄉鎮市區代號
+            </summary>   
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_Town.TownCode">
+            <summary>
+            鄉鎮市區代碼
+            </summary>  
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_BankNo.BankCode">
+            <summary>
+            銀行代號
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_BankNo.BranchCode">
+            <summary>
+            分支機構代號
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_BankNo.BankName">
+            <summary>
+            金融機構名稱
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_BankNo.BranchName">
+            <summary>
+            分支機構名稱
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_BankNo.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Api.GraphQL.QL_BankNo.ColType">
+            <summary>
+            類別
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:DataShareHub.Controllers.AuthenticateController">
+            <summary>
+            權限驗證 controller
+            </summary>
+        </member>
+        <member name="M:DataShareHub.Controllers.AuthenticateController.#ctor(Microsoft.Extensions.Logging.ILogger{DataShareHub.Controllers.AuthenticateController},Serilog.IDiagnosticContext,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Options.IOptions{LC.Infrastructure.AppSettings.AppSettingsOptions},DataShareHub.Services.IAuthenticateService)">
+            <summary>
+            constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="diagnosticContext"></param>
+            <param name="webHostEnvironment"></param>
+            <param name="options"></param>
+            <param name="authenticateService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Controllers.AuthenticateController.Login(DataShareHub.ViewModels.LoginModel)">
+            <summary>
+            登入
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Controllers.AuthenticateController.Register(DataShareHub.ViewModels.RegisterModel)">
+            <summary>
+            註冊
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Controllers.AuthenticateController.RegisterAdmin(DataShareHub.ViewModels.RegisterModel)">
+            <summary>
+            註冊管理者
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataShareHub.Controllers.TestController">
+            <summary>
+            Controller
+            </summary>
+        </member>
+        <member name="T:DataShareHub.Controllers.IBaseController">
+            <summary>
+            基底控制器-介面
+            </summary>
+        </member>
+        <member name="T:DataShareHub.Controllers.BaseController`1">
+            <summary>
+            基底控制器
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:DataShareHub.Controllers.BaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Serilog.IDiagnosticContext,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Options.IOptions{LC.Infrastructure.AppSettings.AppSettingsOptions})">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:DataShareHub.Extensions.DIExtension">
+            <summary> DI擴充 </summary>
+        </member>
+        <member name="M:DataShareHub.Extensions.DIExtension.Inject(System.IServiceProvider,System.Object)">
+            <summary>
+            注入
+            </summary>
+            <param name="provider"></param>
+            <param name="target"></param>
+        </member>
+        <member name="T:DataShareHub.Migrations.Init">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.Init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.Init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.Init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Migrations.AddIdentityFramework">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddIdentityFramework.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddIdentityFramework.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddIdentityFramework.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Migrations.AddTable_Town">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Town.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Town.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Town.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Migrations.AddTable_Village">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Village.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Village.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Village.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Migrations.UpdateTable_County">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.UpdateTable_County.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.UpdateTable_County.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.UpdateTable_County.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Migrations.Seed_Identity">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.Seed_Identity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.Seed_Identity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.Seed_Identity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Migrations.AddTable_Stocks">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Stocks.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Stocks.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_Stocks.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Migrations.AddTable_StockDaily">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_StockDaily.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_StockDaily.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Migrations.AddTable_StockDaily.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Program">
+            <summary>Program</summary>
+        </member>
+        <member name="M:DataShareHub.Program.Main(System.String[])">
+            <summary>
+            程式進入點
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:DataShareHub.Seeds.BaseEntityTypeConfiguration">
+            <summary>
+            Common Variable
+            </summary>
+        </member>
+        <member name="T:DataShareHub.Services.IAuthenticateService">
+            <summary>
+            身分驗證服務 - 介面
+            </summary>
+        </member>
+        <member name="M:DataShareHub.Services.IAuthenticateService.LoginAsync(DataShareHub.ViewModels.LoginModel)">
+            <summary>
+            登入
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.IAuthenticateService.FindByNameAsync(System.String)">
+            <summary>
+            以使用者名稱尋找使用者
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.IAuthenticateService.RegisterAsync(DataShareHub.ViewModels.RegisterModel)">
+            <summary>
+            註冊
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.IAuthenticateService.CreateRoleAsync">
+            <summary>
+            建立角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.IAuthenticateService.AddToRoleAsync(System.String)">
+            <summary>
+            將使用者加入角色
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataShareHub.Services.AuthenticateService">
+            <summary>
+            身分驗證服務
+            </summary>
+        </member>
+        <member name="M:DataShareHub.Services.AuthenticateService.#ctor(Microsoft.AspNetCore.Identity.UserManager{Microsoft.AspNetCore.Identity.IdentityUser},Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.Extensions.Configuration.IConfiguration,DataShareHub.Services.IJwtService)">
+            <summary>
+            constructor
+            </summary>
+            <param name="userManager"></param>
+            <param name="roleManager"></param>
+            <param name="configuration"></param>
+            <param name="jwtService"></param>
+        </member>
+        <member name="M:DataShareHub.Services.AuthenticateService.LoginAsync(DataShareHub.ViewModels.LoginModel)">
+            <summary>
+            登入
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.AuthenticateService.FindByNameAsync(System.String)">
+            <summary>
+            以使用者名稱尋找使用者
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.AuthenticateService.RegisterAsync(DataShareHub.ViewModels.RegisterModel)">
+            <summary>
+            註冊
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.AuthenticateService.CreateRoleAsync">
+            <summary>
+            建立角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.AuthenticateService.AddToRoleAsync(System.String)">
+            <summary>
+            將使用者加入角色
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DataShareHub.Services.Common.ModifyDataModel`1.WillDelete">
+            <summary>
+            刪除
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Services.Common.ModifyDataModel`1.WillInsert">
+            <summary>
+            新增
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Services.Common.ModifyDataModel`1.WillUpdate">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:DataShareHub.Services.Common.IShapefileReaderService.ReadCounty(System.String)">
+            <summary>
+            讀取縣市界Shp
+            </summary>
+            <param name="shapefilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.Common.IShapefileReaderService.ReadTown(System.String)">
+            <summary>
+            讀取鄉鎮縣市界Shp
+            </summary>
+            <param name="shapefilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.Common.IShapefileReaderService.ReadVillage(System.String)">
+            <summary>
+            讀取村里界Shp
+            </summary>
+            <param name="shapefilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.Common.ShapefileReaderService.ReadCounty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.Common.ShapefileReaderService.ReadTown(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.Common.ShapefileReaderService.ReadVillage(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:DataShareHub.Services.IDistrictCountyService`1">
+            <summary>
+            處理縣市的服務 - 介面
+            </summary>
+        </member>
+        <member name="T:DataShareHub.Services.DistrictCountyService">
+            <summary>
+            處理縣市的服務
+            </summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictCountyService.apiUrl">
+            <summary>政府開放資料平台 - 鄉鎮市區界線(TWD97經緯度)</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictCountyService.basePath">
+            <summary>檔案基底路徑</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictCountyService.newDirName">
+            <summary>新檔案資料夾</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictCountyService.currentDirName">
+            <summary>原檔案資料夾</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictCountyService.checksumFilename">
+            <summary>檢查碼檔案名稱</summary>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictCountyService.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory,System.Net.Http.IHttpClientFactory,DataShareHub.Services.Common.IFileOperateService,DataShareHub.Services.Common.IShapefileReaderService)">
+            <summary>建構式</summary>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictCountyService.ExecuteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictCountyService.GetDataAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictCountyService.ProcessDataAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictCountyService.SaveDataAsync(System.Collections.Generic.List{LC.Models.Entities.County})">
+            <inheritdoc/>
+        </member>
+        <member name="T:DataShareHub.Services.IDistrictTownService`1">
+            <summary>
+            處理鄉鎮的服務 - 介面
+            </summary>
+        </member>
+        <member name="T:DataShareHub.Services.DistrictTownService">
+            <summary>
+            處理鄉鎮的服務
+            </summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictTownService.apiUrl">
+            <summary>政府開放資料平台 - 鄉鎮市區界線(TWD97經緯度)</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictTownService.basePath">
+            <summary>檔案基底路徑</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictTownService.newDirName">
+            <summary>新檔案資料夾</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictTownService.currentDirName">
+            <summary>原檔案資料夾</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictTownService.checksumFilename">
+            <summary>檢查碼檔案名稱</summary>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictTownService.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory,System.Net.Http.IHttpClientFactory,DataShareHub.Services.Common.IFileOperateService,DataShareHub.Services.Common.IShapefileReaderService)">
+            <summary>建構式</summary>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictTownService.ExecuteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictTownService.GetDataAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictTownService.ProcessDataAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictTownService.SaveDataAsync(System.Collections.Generic.List{LC.Models.Entities.Town})">
+            <inheritdoc/>
+        </member>
+        <member name="T:DataShareHub.Services.IDistrictVillageService`1">
+            <summary>
+            處理村里的服務 - 介面
+            </summary>
+        </member>
+        <member name="T:DataShareHub.Services.DistrictVillageService">
+            <summary>
+            處理村里的服務
+            </summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictVillageService.apiUrl">
+            <summary>政府開放資料平台 - 村里界圖(TWD97經緯度)</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictVillageService.basePath">
+            <summary>檔案基底路徑</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictVillageService.newDirName">
+            <summary>新檔案資料夾</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictVillageService.currentDirName">
+            <summary>原檔案資料夾</summary>
+        </member>
+        <member name="F:DataShareHub.Services.DistrictVillageService.checksumFilename">
+            <summary>檢查碼檔案名稱</summary>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictVillageService.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory,System.Net.Http.IHttpClientFactory,DataShareHub.Services.Common.IFileOperateService,DataShareHub.Services.Common.IShapefileReaderService)">
+            <summary>建構式</summary>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictVillageService.ExecuteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictVillageService.GetDataAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictVillageService.ProcessDataAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.DistrictVillageService.SaveDataAsync(System.Collections.Generic.List{LC.Models.Entities.Village})">
+            <inheritdoc/>
+        </member>
+        <member name="T:DataShareHub.Services.IFetchDataService`1">
+            <summary>
+            由外部取得資料的排程 - 介面
+            </summary>
+        </member>
+        <member name="M:DataShareHub.Services.IFetchDataService`1.ExecuteAsync">
+            <summary>
+            程式進入點
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.IFetchDataService`1.GetDataAsync">
+            <summary>
+            由外部API取得資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.IFetchDataService`1.ProcessDataAsync">
+            <summary>
+            處理資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.IFetchDataService`1.SaveDataAsync(`0)">
+            <summary>
+            儲存資料進資料庫
+            </summary>
+            <param name="dataList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataShareHub.Services.IJwtService.Authenticate(DataShareHub.ViewModels.VM_Login)">
+            <summary>
+            驗證登入者
+            </summary>
+            <param name="vm_login">登入資訊</param>
+            <returns>驗證結果</returns>
+        </member>
+        <member name="M:DataShareHub.Services.IJwtService.GenerateAccessToken(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+            建立JWT Token
+            </summary>
+            <param name="claims">聲明</param>
+            <returns>JWT Token</returns>
+        </member>
+        <member name="M:DataShareHub.Services.JwtService.#ctor(LC.Models.Contexts.DatabaseContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            JwtService 建構子
+            </summary>
+            <param name="context">資料庫上下文</param>
+            <param name="config">設定檔</param>
+        </member>
+        <member name="M:DataShareHub.Services.JwtService.Authenticate(DataShareHub.ViewModels.VM_Login)">
+            <summary>
+            驗證登入者
+            </summary>
+            <param name="vm_login">登入資訊</param>
+            <returns>驗證結果</returns>
+        </member>
+        <member name="M:DataShareHub.Services.JwtService.GenerateAccessToken(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+            建立JWT Token
+            </summary>
+            <param name="claims">聲明</param>
+            <returns>JWT Token</returns>
+        </member>
+        <member name="T:DataShareHub.Services.ITestService">
+            <summary>
+            Represents the interface for the test service.
+            </summary>
+        </member>
+        <member name="M:DataShareHub.Services.ITestService.GetTestNumber">
+            <summary>
+            Gets a test number.
+            </summary>
+            <returns>The test number.</returns>
+        </member>
+        <member name="T:DataShareHub.Services.TestService">
+            <summary>
+            Represents the implementation of the test service.
+            </summary>
+        </member>
+        <member name="M:DataShareHub.Services.TestService.GetTestNumber">
+            <summary>
+            Gets a test number.
+            </summary>
+            <returns>The test number.</returns>
+        </member>
+        <member name="T:DataShareHub.Services.TWSE.IStocksService`1">
+            <summary>
+            上市個股資訊服務 - 介面
+            </summary>
+        </member>
+        <member name="T:DataShareHub.Services.TWSE.StocksService">
+            <summary>
+            上市個股資訊服務
+            </summary>
+        </member>
+        <member name="F:DataShareHub.Services.TWSE.StocksService.apiUrl">
+            <summary>TWSE openapi - 上市個股日成交資訊</summary>
+        </member>
+        <member name="F:DataShareHub.Services.TWSE.StocksService.basePath">
+            <summary>檔案基底路徑</summary>
+        </member>
+        <member name="F:DataShareHub.Services.TWSE.StocksService.newDirName">
+            <summary>新檔案資料夾</summary>
+        </member>
+        <member name="F:DataShareHub.Services.TWSE.StocksService.currentDirName">
+            <summary>原檔案資料夾</summary>
+        </member>
+        <member name="F:DataShareHub.Services.TWSE.StocksService.checksumFilename">
+            <summary>檢查碼檔案名稱</summary>
+        </member>
+        <member name="M:DataShareHub.Services.TWSE.StocksService.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory,System.Net.Http.IHttpClientFactory,DataShareHub.Services.Common.IFileOperateService)">
+            <summary>建構式</summary>
+        </member>
+        <member name="M:DataShareHub.Services.TWSE.StocksService.ExecuteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.TWSE.StocksService.GetDataAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.TWSE.StocksService.ProcessDataAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:DataShareHub.Services.TWSE.StocksService.SaveDataAsync(System.ValueTuple{System.Collections.Generic.List{LC.Models.Entities.Stocks},System.Collections.Generic.List{LC.Models.Entities.StockDaily}})">
+            <inheritdoc/>
+        </member>
+        <member name="T:DataShareHub.Tasks.District.CountyHangfireJob">
+            <summary>
+            縣市資料的 Hangfire 工作
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Tasks.District.CountyHangfireJob.JobId">
+            <summary> 工作的唯一識別碼 </summary>
+        </member>
+        <member name="P:DataShareHub.Tasks.District.CountyHangfireJob.CronExpression">
+            <summary> 工作的 CRON 表達式 </summary>
+        </member>
+        <member name="M:DataShareHub.Tasks.District.CountyHangfireJob.#ctor(Microsoft.Extensions.Logging.ILogger{DataShareHub.Tasks.District.CountyHangfireJob},DataShareHub.Services.IDistrictCountyService{System.Collections.Generic.List{LC.Models.Entities.County}})">
+            <summary> 建構式 </summary>
+        </member>
+        <member name="M:DataShareHub.Tasks.District.CountyHangfireJob.Execute(Hangfire.IJobCancellationToken,Hangfire.Server.PerformContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Tasks.District.CountyHangfireJob.PerformJobTasks">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Tasks.District.TownHangfireJob">
+            <summary>
+            鄉鎮市區資料的 Hangfire 工作
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Tasks.District.TownHangfireJob.JobId">
+            <summary> 工作的唯一識別碼 </summary>
+        </member>
+        <member name="P:DataShareHub.Tasks.District.TownHangfireJob.CronExpression">
+            <summary> 工作的 CRON 表達式 </summary>
+        </member>
+        <member name="M:DataShareHub.Tasks.District.TownHangfireJob.#ctor(Microsoft.Extensions.Logging.ILogger{DataShareHub.Tasks.District.TownHangfireJob},DataShareHub.Services.IDistrictTownService{System.Collections.Generic.List{LC.Models.Entities.Town}})">
+            <summary> 建構式 </summary>
+        </member>
+        <member name="M:DataShareHub.Tasks.District.TownHangfireJob.Execute(Hangfire.IJobCancellationToken,Hangfire.Server.PerformContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Tasks.District.TownHangfireJob.PerformJobTasks">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Tasks.District.VillageHangfireJob">
+            <summary>
+            村里資料的 Hangfire 工作
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Tasks.District.VillageHangfireJob.JobId">
+            <summary> 工作的唯一識別碼 </summary>
+        </member>
+        <member name="P:DataShareHub.Tasks.District.VillageHangfireJob.CronExpression">
+            <summary> 工作的 CRON 表達式 </summary>
+        </member>
+        <member name="M:DataShareHub.Tasks.District.VillageHangfireJob.#ctor(Microsoft.Extensions.Logging.ILogger{DataShareHub.Tasks.District.VillageHangfireJob},DataShareHub.Services.IDistrictVillageService{System.Collections.Generic.List{LC.Models.Entities.Village}})">
+            <summary> 建構式 </summary>
+        </member>
+        <member name="M:DataShareHub.Tasks.District.VillageHangfireJob.Execute(Hangfire.IJobCancellationToken,Hangfire.Server.PerformContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Tasks.District.VillageHangfireJob.PerformJobTasks">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.Tasks.TWSE.StocksHangfireJob">
+            <summary>
+            上市個股資訊的 Hangfire 工作
+            </summary>
+        </member>
+        <member name="P:DataShareHub.Tasks.TWSE.StocksHangfireJob.JobId">
+            <summary> 工作的唯一識別碼 </summary>
+        </member>
+        <member name="P:DataShareHub.Tasks.TWSE.StocksHangfireJob.CronExpression">
+            <summary> 工作的 CRON 表達式 </summary>
+        </member>
+        <member name="M:DataShareHub.Tasks.TWSE.StocksHangfireJob.#ctor(Microsoft.Extensions.Logging.ILogger{DataShareHub.Tasks.TWSE.StocksHangfireJob},DataShareHub.Services.TWSE.IStocksService{System.ValueTuple{System.Collections.Generic.List{LC.Models.Entities.Stocks},System.Collections.Generic.List{LC.Models.Entities.StockDaily}}})">
+            <summary> 建構式 </summary>
+        </member>
+        <member name="M:DataShareHub.Tasks.TWSE.StocksHangfireJob.Execute(Hangfire.IJobCancellationToken,Hangfire.Server.PerformContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DataShareHub.Tasks.TWSE.StocksHangfireJob.PerformJobTasks">
+            <inheritdoc />
+        </member>
+        <member name="T:DataShareHub.ViewModels.RegisterModel">
+            <summary>
+            註冊資料
+            </summary>   
+        </member>
+        <member name="P:DataShareHub.ViewModels.RegisterModel.Username">
+            <summary>
+            使用者名稱
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.RegisterModel.Email">
+            <summary>
+            email
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.RegisterModel.Password">
+            <summary>
+            密碼
+            </summary>
+        </member>
+        <member name="T:DataShareHub.ViewModels.LoginModel">
+            <summary>
+            登入資料
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.LoginModel.Username">
+            <summary>
+            使用者名稱
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.LoginModel.Password">
+            <summary>
+            密碼
+            </summary>
+        </member>
+        <member name="T:DataShareHub.ViewModels.Response">
+            <summary>
+            Represents the response.
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.Response.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.Response.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="T:DataShareHub.ViewModels.UserRoles">
+            <summary>
+            UserRoles
+            </summary>
+        </member>
+        <member name="F:DataShareHub.ViewModels.UserRoles.Admin">
+            <summary>
+            Admin
+            </summary>
+        </member>
+        <member name="F:DataShareHub.ViewModels.UserRoles.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="T:DataShareHub.ViewModels.TestVMPage1">
+            <summary>
+            TestVMPage1
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.TestVMPage1.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.TestVMPage1.Name">
+            <summary>
+            用戶名
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.TestVMPage1.TestList">
+            <summary>
+            相關用戶
+            </summary>
+        </member>
+        <member name="T:DataShareHub.ViewModels.TestVM">
+            <summary>
+            TestVM
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.TestVM.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.TestVM.Name">
+            <summary>
+            用戶名
+            </summary>
+        </member>
+        <member name="T:DataShareHub.ViewModels.VM_Login">
+            <summary>
+            ViewModel 登入
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.VM_Login.Account">
+            <summary>
+            帳號
+            </summary>
+        </member>
+        <member name="P:DataShareHub.ViewModels.VM_Login.Password">
+            <summary>
+            密碼
+            </summary>
+        </member>
+        <member name="T:LC.Infrastructure.AppSettings.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.AppSettings.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.AppSettings.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Authenticate.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Authenticate.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Authenticate.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Authenticate.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Authorization.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Authorization.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Authorization.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Cache.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Cache.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Cache.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.ContainerInfrastructure">
+            <summary>
+            基礎設施容器
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.ContainerInfrastructure.AddInfrastructure(LC.Infrastructure.InfrastructureEnum)">
+            <summary>
+            加入基礎設施
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.ContainerInfrastructure.Run(System.String[])">
+            <summary>
+            運行
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:LC.Infrastructure.Cors.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Cors.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Cors.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Cors.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Database.Extensions.SqlDefaultValueAttribute">
+            <summary>
+            Set a default value defined on the sql server
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Extensions.SqlDefaultValueAttribute.DefaultValue">
+            <summary>
+            Default value to apply
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.Database.Extensions.SqlDefaultValueAttribute.#ctor(System.String)">
+            <summary>
+            Set a default value defined on the sql server
+            </summary>
+            <param name="value">Default value to apply</param>
+        </member>
+        <member name="T:LC.Infrastructure.Database.Extensions.DecimalPrecisionAttribute">
+            <summary>
+            Set the decimal precision of a decimal sql data type
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Extensions.DecimalPrecisionAttribute.Precision">
+            <summary>
+            Specify the precision - the number of digits both left and right of the decimal
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Extensions.DecimalPrecisionAttribute.Scale">
+            <summary>
+            Specify the scale - the number of digits to the right of the decimal
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.Database.Extensions.DecimalPrecisionAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Set the decimal precision of a decimal sql data type
+            </summary>
+            <param name="precision">Specify the precision - the number of digits both left and right of the decimal</param>
+            <param name="scale">Specify the scale - the number of digits to the right of the decimal</param>
+        </member>
+        <member name="M:LC.Infrastructure.Database.Extensions.SoftDeleteQueryFilter.Apply(Microsoft.EntityFrameworkCore.ModelBuilder,System.Type)">
+            <summary>
+            加入軟刪除查詢過濾器
+            參考 https://www.thereformedprogrammer.net/introducing-the-efcore-softdeleteservices-library-to-automate-soft-deletes/
+            </summary>
+            <param name="builder"></param>
+            <param name="type"></param>
+        </member>
+        <member name="T:LC.Infrastructure.Database.Extensions.SoftDeleteExtension">
+            <summary>
+            DbContext 擴充方法
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.Database.Extensions.SoftDeleteExtension.AddSoftDeleteQueryFilter(Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType)">
+            <summary>
+            加入軟刪除查詢過濾器
+            參考 https://www.thereformedprogrammer.net/introducing-the-efcore-softdeleteservices-library-to-automate-soft-deletes/
+            </summary>
+            <param name="entityData"></param>
+        </member>
+        <member name="M:LC.Infrastructure.Database.Extensions.SoftDeleteExtension.GetSoftDeleteFilter``1">
+            <summary>
+            取得軟刪除查詢過濾器
+            參考 https://www.thereformedprogrammer.net/introducing-the-efcore-softdeleteservices-library-to-automate-soft-deletes/
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:LC.Infrastructure.Database.Extensions.SoftDeleteExtension.FindAllWithDelete``1(Microsoft.EntityFrameworkCore.DbSet{``0})">
+            <summary>
+            取得所有資料(包含已刪除)
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="dbSet"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LC.Infrastructure.Database.Interface.IDelete">
+            <summary>
+            介面 - 紀錄欄位
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.IDelete.IsDelete">
+            <summary> 是否刪除 </summary>
+        </member>
+        <member name="T:LC.Infrastructure.Database.Interface.IEntity">
+            <summary>
+            介面 - 紀錄欄位
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.IEntity.ID">
+            <summary> 流水號 </summary>
+        </member>
+        <member name="T:LC.Infrastructure.Database.Interface.AEntity">
+            <summary>
+            抽象 - 紀錄欄位
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.AEntity.ID">
+            <inheritdoc/>
+        </member>
+        <member name="T:LC.Infrastructure.Database.Interface.IRecord">
+            <summary>
+            介面 - 紀錄欄位
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.IRecord.CreateDatetime">
+            <summary> 新增日期 </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.IRecord.UpdateDatetime">
+            <summary> 更新日期 </summary>
+        </member>
+        <member name="T:LC.Infrastructure.Database.Interface.ARecord">
+            <summary>
+            抽象 - 紀錄欄位
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.ARecord.ID">
+            <inheritdoc/>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.ARecord.IsDelete">
+            <inheritdoc/>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.ARecord.CreateDatetime">
+            <inheritdoc/>
+        </member>
+        <member name="P:LC.Infrastructure.Database.Interface.ARecord.UpdateDatetime">
+            <inheritdoc/>     
+        </member>
+        <member name="T:LC.Infrastructure.Database.LogFeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.LogFeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Database.LogFeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Database.LogFeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Database.MainFeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.MainFeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Database.MainFeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Database.MainFeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Database.TaskFeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Database.TaskFeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Database.TaskFeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Database.TaskFeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.DI.AutofacModule">
+            <summary>
+            Autofac Module
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.DI.AutofacModule.Load(Autofac.ContainerBuilder)">
+            <summary>
+            註冊 至 Container
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:LC.Infrastructure.DI.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.DI.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.DI.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Files.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Files.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Files.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Graphql.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Graphql.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Graphql.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Graphql.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Hangfire.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Hangfire.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Hangfire.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Hangfire.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Hangfire.HangfireScheduler">
+            <summary>
+            Hangfire排程器
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.Hangfire.HangfireScheduler.RecurringTasks(System.IServiceProvider)">
+            <summary>
+            執行定期任務
+            </summary>
+        </member>
+        <member name="T:LC.Infrastructure.Hangfire.Interface.AHangfireJob`1">
+            <summary>
+            Hangfire工作的抽象類別
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:LC.Infrastructure.Hangfire.Interface.AHangfireJob`1.JobId">
+            <inheritdoc />
+        </member>
+        <member name="P:LC.Infrastructure.Hangfire.Interface.AHangfireJob`1.CronExpression">
+            <inheritdoc />
+        </member>
+        <member name="F:LC.Infrastructure.Hangfire.Interface.AHangfireJob`1._cancellationToken">
+            <summary>
+            取消權杖
+            </summary>
+        </member>
+        <member name="F:LC.Infrastructure.Hangfire.Interface.AHangfireJob`1._context">
+            <summary>
+            PerformContext
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.Hangfire.Interface.AHangfireJob`1.PerformJobTasks">
+            <summary>
+            工作的實際執行內容
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.Hangfire.Interface.AHangfireJob`1.Execute(Hangfire.IJobCancellationToken,Hangfire.Server.PerformContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Hangfire.Interface.AHangfireJob`1.Schedule">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Hangfire.Interface.IHangfireJob">
+            <summary>
+            Hangfire工作的介面
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Hangfire.Interface.IHangfireJob.JobId">
+            <summary>
+            工作的唯一識別碼
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Hangfire.Interface.IHangfireJob.CronExpression">
+            <summary>
+            工作的 CRON 表達式
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure.Hangfire.Interface.IHangfireJob.Execute(Hangfire.IJobCancellationToken,Hangfire.Server.PerformContext)">
+            <summary>
+            執行工作
+            </summary>
+            <param name="cancellationToken">工作的取消權杖</param>
+            <param name="context">工作的執行上下文</param>
+        </member>
+        <member name="M:LC.Infrastructure.Hangfire.Interface.IHangfireJob.Schedule">
+            <summary>
+            將工作加入排程
+            </summary>
+        </member>
+        <member name="T:LC.Infrastructure.HealthCheck.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.HealthCheck.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.HealthCheck.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.HttpClient.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.HttpClient.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.HttpClient.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Identity.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Identity.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Identity.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.InfrastructureEnum">
+            <summary>
+            列舉 - 可使用的Infrastructure
+            </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.DI">
+            <summary> DI </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.HealthCheck">
+            <summary> HealthCheck </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.AppSettings">
+            <summary> AppSettings </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.MainDatabase">
+            <summary> MainDatabase </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.LogDatabase">
+            <summary> LogDatabase </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.TaskDatabase">
+            <summary> TaskDatabase </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Identity">
+            <summary> Identity </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Authentication">
+            <summary> Authentication </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Authorization">
+            <summary> Authorization </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Route">
+            <summary> Route </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Cors">
+            <summary> Cors </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Graphql">
+            <summary> Graphql </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Hangfire">
+            <summary> Hangfire </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Swagger">
+            <summary> Swagger </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Mvc">
+            <summary> Mvc </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.HttpClient">
+            <summary> HttpClient </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Session">
+            <summary> Session </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Cache">
+            <summary> Cache </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Logger">
+            <summary> Logger </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Files">
+            <summary> Files </summary>
+        </member>
+        <member name="F:LC.Infrastructure.InfrastructureEnum.Security">
+            <summary> Security </summary>
+        </member>
+        <member name="T:LC.Infrastructure.Logger.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Logger.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Logger.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Logger.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Mvc.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Mvc.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Mvc.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Route.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Route.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Route.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Security.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Security.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Security.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Security.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Session.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Session.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Session.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure.Swagger.FeatureInfrastructure">
+            <summary>
+            功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure.Swagger.FeatureInfrastructure.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Swagger.FeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure.Swagger.FeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Infrastructure._Base.IFeatureInfrastructure">
+            <summary>
+            介面 - 功能基礎設施
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure._Base.IFeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            配置應用程序所需的服務
+            </summary>
+        </member>
+        <member name="M:LC.Infrastructure._Base.IFeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <summary>
+            配置應用程序的中介軟體
+            </summary>
+        </member>
+        <member name="T:LC.Infrastructure._Base.AbstractFeatureInfrastructure">
+            <summary>
+            抽象 - 功能基礎設施
+            </summary>
+        </member>
+        <member name="P:LC.Infrastructure._Base.AbstractFeatureInfrastructure.Name">
+            <summary> 功能 </summary>
+        </member>
+        <member name="M:LC.Infrastructure._Base.AbstractFeatureInfrastructure.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LC.Infrastructure._Base.AbstractFeatureInfrastructure.Configure(Microsoft.AspNetCore.Builder.WebApplication)">
+            <inheritdoc />
+        </member>
+        <member name="T:LC.Models.Entities.County">
+            <summary>
+            縣市
+            </summary>
+        </member>
+        <member name="P:LC.Models.Entities.County.Name">
+            <summary>
+            名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.County.CountyID">
+            <summary>
+            縣市代號
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.County.CountyCode">
+            <summary>
+            縣市代碼
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.County.EngName">
+            <summary>
+            名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.County.Geom">
+            <summary>
+            座標點位
+            </summary>
+        </member>
+        <member name="T:LC.Models.Entities.Town">
+            <summary>
+            鄉鎮市區
+            </summary>
+        </member>
+        <member name="P:LC.Models.Entities.Town.Name">
+            <summary>
+            名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Town.CountyName">
+            <summary>
+            名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Town.CountyID">
+            <summary>
+            縣市代號
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Town.CountyCode">
+            <summary>
+            縣市代碼
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Town.TownID">
+            <summary>
+            鄉鎮市區代號
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Town.TownCode">
+            <summary>
+            鄉鎮市區代碼
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Town.EngName">
+            <summary>
+            英文名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Town.Geom">
+            <summary>
+            座標點位
+            </summary>
+        </member>
+        <member name="T:LC.Models.Entities.StockDaily">
+            <summary>
+            上市個股當日成交資訊
+            </summary>
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.Code">
+            <summary>
+            代碼
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.TradeVolume">
+            <summary> 成交量 </summary>  
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.TradeValue">
+            <summary> 成交值 </summary>  
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.OpeningPrice">
+            <summary> 開盤價 </summary>
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.HighestPrice">
+            <summary> 盤中最高價 </summary>
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.LowestPrice">
+            <summary> 盤中最低價 </summary>
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.ClosingPrice">
+            <summary> 收盤價 </summary>
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.Change">
+            <summary> 漲跌價差 </summary>
+        </member>
+        <member name="P:LC.Models.Entities.StockDaily.Transaction">
+            <summary> 成交筆數 </summary>
+        </member>
+        <member name="T:LC.Models.Entities.Stocks">
+            <summary>
+            上市個股
+            </summary>
+        </member>
+        <member name="P:LC.Models.Entities.Stocks.Name">
+            <summary>
+            名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Stocks.Code">
+            <summary>
+            代碼
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.UserProfile.Name">
+            <summary>
+            名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.UserProfile.Account">
+            <summary>
+            帳號
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.UserProfile.Password">
+            <summary>
+            密碼
+            </summary>        
+        </member>
+        <member name="T:LC.Models.Entities.Village">
+            <summary>
+            村里
+            </summary>
+        </member>
+        <member name="P:LC.Models.Entities.Village.Name">
+            <summary>
+            名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.VillageCode">
+            <summary>
+            縣市代碼
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.CountyName">
+            <summary>
+            名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.CountyID">
+            <summary>
+            縣市代號
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.CountyCode">
+            <summary>
+            縣市代碼
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.TownName">
+            <summary>
+            鄉鎮市區名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.TownID">
+            <summary>
+            鄉鎮市區代號
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.TownCode">
+            <summary>
+            鄉鎮市區代碼
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.EngName">
+            <summary>
+            英文名稱
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.Note">
+            <summary>
+            備註
+            </summary>        
+        </member>
+        <member name="P:LC.Models.Entities.Village.Geom">
+            <summary>
+            座標點位
+            </summary>
+        </member>
+    </members>
+</doc>

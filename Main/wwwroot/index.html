@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<style>
+  .hoverPlace:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+    transition-duration: 0.5s;
+    cursor: auto;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>資料統整共享中心</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-800 text-white min-h-screen flex flex-col items-center justify-center ">
+
+  <!-- Fixed Header -->
+  <div class="fixed top-0 w-full bg-gray-800 p-4 text-center">
+    <h1 class="text-4xl font-bold">DataShareHub</h1>
+    <h2 class="text-xl">資料統整共享中心</h2>
+  </div>
+
+  <!-- Content -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 ">
+
+    <!-- Card 1 -->
+    <div class="bg-blue-600 p-8 m-8 relative rounded-md shadow-md overflow-hidden hoverPlace">
+      <div class="">
+        <h2 class="text-2xl font-bold mb-4">Swagger</h2>
+        <p class="text-gray-200">Swagger是一個開源的API框架，通過標準化RESTful
+          API的描述和文檔生成，簡化開發流程。它提供清晰的API文檔和自動化工具，使開發者更輕鬆地設計、測試和部署API。</p>
+      </div>
+      <a href="/Swagger" target="_blank" class="absolute bottom-4 right-4 text-yellow-400 hover:underline">Go</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-green-600 p-8 m-8 relative rounded-md shadow-md overflow-hidden hoverPlace">
+      <div class="">
+        <h2 class="text-2xl font-bold mb-4">SeriLog</h2>
+        <p class="text-gray-200">
+          SeriLog是一個強大的.NET日誌記錄庫，以高效且可擴展的方式捕捉應用程序的事件。它支持多種輸出格式和目的地，提供靈活的配置選項，使開發者能夠方便地記錄並分析應用程序的運行狀態。</p>
+      </div>
+      <a href="/SeriLogs" target="_blank" class="absolute bottom-4 right-4 text-yellow-400 hover:underline">Go</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-orange-600 p-8 m-8 relative rounded-md shadow-md overflow-hidden hoverPlace">
+      <div class="">
+        <h2 class="text-2xl font-bold mb-4">Hangfire</h2>
+        <p class="text-gray-200">Hangfire是一個開源的.NET任務調度框架，使開發者能夠輕鬆實現後台任務的執行和管理。透過它，可以方便地處理定時任務、重試機制和分散式任務，提升應用程式的效能和可靠性。
+        </p>
+      </div>
+      <a href="/Hangfires" target="_blank" class="absolute bottom-4 right-4 text-yellow-400 hover:underline">Go</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-purple-600 p-8 m-8 relative rounded-md shadow-md overflow-hidden">
+      <div class="">
+        <h2 class="text-2xl font-bold mb-4">GraphQL</h2>
+        <p class="text-gray-200">GraphQL!!!</p>
+      </div>
+      <a href="/graphqlui" class="absolute bottom-4 right-4 text-yellow-400 hover:underline">GO</a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
