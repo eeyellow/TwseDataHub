@@ -10,10 +10,10 @@ using NetTopologySuite.Geometries;
 
 #nullable disable
 
-namespace DataShareHub.Migrations
+namespace TwseDataHub.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240802074855_AddTable_StockDaily")]
+    [Migration("20240805035018_AddTable_StockDaily")]
     partial class AddTable_StockDaily
     {
         /// <inheritdoc />
@@ -101,11 +101,11 @@ namespace DataShareHub.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("ID"));
 
                     b.Property<decimal?>("Change")
-                        .HasColumnType("decimal(18,2)")
+                        .HasColumnType("decimal(18, 4)")
                         .HasComment("漲跌價差");
 
                     b.Property<decimal?>("ClosingPrice")
-                        .HasColumnType("decimal(18,2)")
+                        .HasColumnType("decimal(18, 4)")
                         .HasComment("收盤價");
 
                     b.Property<string>("Code")
@@ -115,15 +115,15 @@ namespace DataShareHub.Migrations
                         .HasComment("代碼");
 
                     b.Property<decimal?>("HighestPrice")
-                        .HasColumnType("decimal(18,2)")
+                        .HasColumnType("decimal(18, 4)")
                         .HasComment("盤中最高價");
 
                     b.Property<decimal?>("LowestPrice")
-                        .HasColumnType("decimal(18,2)")
+                        .HasColumnType("decimal(18, 4)")
                         .HasComment("盤中最低價");
 
                     b.Property<decimal?>("OpeningPrice")
-                        .HasColumnType("decimal(18,2)")
+                        .HasColumnType("decimal(18, 4)")
                         .HasComment("開盤價");
 
                     b.Property<long?>("TradeValue")
@@ -134,9 +134,13 @@ namespace DataShareHub.Migrations
                         .HasColumnType("bigint")
                         .HasComment("成交量");
 
-                    b.Property<long?>("Transaction")
+                    b.Property<long?>("TransactionCount")
                         .HasColumnType("bigint")
                         .HasComment("成交筆數");
+
+                    b.Property<DateTime>("TransactionDate")
+                        .HasColumnType("datetime2")
+                        .HasComment("交易日期");
 
                     b.HasKey("ID");
 
@@ -565,13 +569,13 @@ namespace DataShareHub.Migrations
                         {
                             Id = "fd32bc24-e001-4464-81fd-df792b5626f7",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6300588d-a0f0-45e5-98ef-b41bf4cfa0f5",
+                            ConcurrencyStamp = "65e438b1-3bd3-48fc-92bc-a7c544874e98",
                             Email = "admin@your.company.tw",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@YOUR.COMPANY.TW",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEL2WSmZy2txeZLBIxS6bNecIa5/08rP66OOOhnGdAg/3nKqIO/nc8kgjZvMqIQnz9g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOt9t92d3rFCI/79pkAppm4uR727QpovmAttqu1aiKEuzE/nMVGuNKJCBWFbW8incg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

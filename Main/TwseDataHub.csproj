@@ -11,7 +11,7 @@
   </PropertyGroup>
 	
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>.\DataShareHub.xml</DocumentationFile>
+    <DocumentationFile>.\TwseDataHub.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

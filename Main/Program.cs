@@ -1,6 +1,6 @@
 ﻿using LC.Infrastructure;
 
-namespace DataShareHub
+namespace TwseDataHub
 {
     /// <summary>Program</summary>
     public class Program

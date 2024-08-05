@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DataShareHub.Migrations
+namespace TwseDataHub.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
     [Migration("20240103080345_Init")]

@@ -1,9 +1,9 @@
 ﻿using LC.Infrastructure.Hangfire.Interface;
 using Hangfire.Server;
 using LC.Models.Entities;
-using DataShareHub.Services.TWSE;
+using TwseDataHub.Services.TWSE;
 
-namespace DataShareHub.Tasks.TWSE
+namespace TwseDataHub.Tasks.TWSE
 {
     /// <summary>
     /// 上市個股資訊的 Hangfire 工作

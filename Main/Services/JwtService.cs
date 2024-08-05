@@ -1,6 +1,6 @@
 ﻿using LC.Models.Contexts;
 
-namespace DataShareHub.Services
+namespace TwseDataHub.Services
 {
     public class AuthResponse
     {

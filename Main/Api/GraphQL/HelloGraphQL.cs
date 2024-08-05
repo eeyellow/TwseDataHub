@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LC.Models.Contexts;
 using LC.Models.Entities;
-using DataShareHub.ViewModels;
+using TwseDataHub.ViewModels;
 using GraphQL;
 using GraphQL.Types;
 using Main.Services;
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json.Linq;
 using LC.Models.Entities;
 
-namespace DataShareHub.Api.GraphQL
+namespace TwseDataHub.Api.GraphQL
 {
 
     public class UserProfileType : ObjectGraphType<UserProfile>

@@ -18,7 +18,7 @@ namespace LC.Infrastructure.Graphql
         {
             builder.Services
                 .AddGraphQL(x => x
-                    .AddSchema<DataShareHub.Api.GraphQL.PublicSchema>()
+                    .AddSchema<TwseDataHub.Api.GraphQL.PublicSchema>()
                     .AddGraphTypes(Assembly.GetExecutingAssembly())
                     .AddSystemTextJson()
                 );

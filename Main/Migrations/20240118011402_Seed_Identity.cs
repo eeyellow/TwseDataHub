@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace DataShareHub.Migrations
+namespace TwseDataHub.Migrations
 {
     /// <inheritdoc />
     public partial class Seed_Identity : Migration

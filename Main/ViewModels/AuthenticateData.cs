@@ -1,4 +1,4 @@
-namespace DataShareHub.ViewModels
+namespace TwseDataHub.ViewModels
 {
     /// <summary>
     /// 註冊資料

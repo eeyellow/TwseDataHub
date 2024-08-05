@@ -3,7 +3,7 @@ using NetTopologySuite.Geometries;
 using NetTopologySuite.IO;
 using LC.Models.Entities;
 
-namespace DataShareHub.Services.Common
+namespace TwseDataHub.Services.Common
 {
     #region ShapefileReaderService
     public interface IShapefileReaderService

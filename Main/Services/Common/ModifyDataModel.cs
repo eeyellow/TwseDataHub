@@ -1,6 +1,6 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 
-namespace DataShareHub.Services.Common
+namespace TwseDataHub.Services.Common
 {
     public class ModifyDataModel<T>
     {

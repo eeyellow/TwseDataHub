@@ -1,4 +1,4 @@
-﻿namespace DataShareHub.Seeds
+﻿namespace TwseDataHub.Seeds
 {
     /// <summary>
     /// Common Variable

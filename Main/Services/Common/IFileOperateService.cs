@@ -1,6 +1,6 @@
 ﻿using System.IO.Compression;
 
-namespace DataShareHub.Services.Common
+namespace TwseDataHub.Services.Common
 {
     #region FileOperateService
     public interface IFileOperateService

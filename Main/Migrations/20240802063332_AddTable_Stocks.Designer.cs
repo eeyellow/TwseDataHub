@@ -10,7 +10,7 @@ using NetTopologySuite.Geometries;
 
 #nullable disable
 
-namespace DataShareHub.Migrations
+namespace TwseDataHub.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
     [Migration("20240802063332_AddTable_Stocks")]

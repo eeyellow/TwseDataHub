@@ -2,7 +2,7 @@
 using Hangfire.Server;
 using LC.Models.Entities;
 
-namespace DataShareHub.Tasks.District
+namespace TwseDataHub.Tasks.District
 {
     /// <summary>
     /// 縣市資料的 Hangfire 工作

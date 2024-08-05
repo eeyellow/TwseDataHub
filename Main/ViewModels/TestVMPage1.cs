@@ -1,6 +1,6 @@
 ﻿using LC.Models.Entities;
 
-namespace DataShareHub.ViewModels
+namespace TwseDataHub.ViewModels
 {
     /// <summary>
     /// TestVMPage1

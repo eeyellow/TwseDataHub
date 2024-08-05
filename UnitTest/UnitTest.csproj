@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Main\DataShareHub.csproj" />
+    <ProjectReference Include="..\Main\TwseDataHub.csproj" />
   </ItemGroup>
 
 </Project>

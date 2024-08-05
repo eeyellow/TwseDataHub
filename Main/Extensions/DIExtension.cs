@@ -1,4 +1,4 @@
-﻿namespace DataShareHub.Extensions
+﻿namespace TwseDataHub.Extensions
 {
     /// <summary> DI擴充 </summary>
     public static class DIExtension

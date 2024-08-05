@@ -1,4 +1,4 @@
-namespace DataShareHub.Extensions
+namespace TwseDataHub.Extensions
 {
     public static class CommonExtension
     {

@@ -1,9 +1,9 @@
 ﻿using System.Text.RegularExpressions;
-using DataShareHub.Services.Common;
+using TwseDataHub.Services.Common;
 using LC.Models.Contexts;
 using LC.Models.Entities;
 
-namespace DataShareHub.Services.TWSE
+namespace TwseDataHub.Services.TWSE
 {
     /// <summary>
     /// 上市個股資訊服務 - 介面
@@ -69,8 +69,8 @@ namespace DataShareHub.Services.TWSE
 
             var fileName = result.Content.Headers.ContentDisposition.FileName;
             var newChecksumText = _fileOperateService.SaveAndCalculateChecksum(
-                result.Content.ReadAsStream(), 
-                $"{basePath}/{newDirName}/{fileName}", 
+                result.Content.ReadAsStream(),
+                $"{basePath}/{newDirName}/{fileName}",
                 checksumFilename
             );
             var currentChecksumText = _fileOperateService.ReadTextFile(
@@ -97,6 +97,8 @@ namespace DataShareHub.Services.TWSE
             var dataContent = _fileOperateService.ReadTextFile(jsonfile.FullName);
             var dataResult = JsonConvert.DeserializeObject<List<Stocks?>>(dataContent);
             var dataResult2 = JsonConvert.DeserializeObject<List<StockDaily?>>(dataContent);
+            var now = DateTime.Today;
+            dataResult2.ForEach(d => d.TransactionDate = now);
             #endregion 客製化部分
 
             _fileOperateService.DeleteDirectory($"{basePath}/{currentDirName}");
@@ -155,8 +157,6 @@ namespace DataShareHub.Services.TWSE
                 await db.SaveChangesAsync();
                 await tx2.CommitAsync();
             }
-        }        
+        }
     }
-
-
 }

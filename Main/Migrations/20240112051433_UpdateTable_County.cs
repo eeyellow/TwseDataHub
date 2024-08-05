@@ -3,7 +3,7 @@ using NetTopologySuite.Geometries;
 
 #nullable disable
 
-namespace DataShareHub.Migrations
+namespace TwseDataHub.Migrations
 {
     /// <inheritdoc />
     public partial class UpdateTable_County : Migration

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DataShareHub.Seeds
+namespace TwseDataHub.Seeds
 {
     public class IdentityUserRoleConfiguration : BaseEntityTypeConfiguration, IEntityTypeConfiguration<IdentityUserRole<string>>
     {

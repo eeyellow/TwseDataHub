@@ -1,9 +1,9 @@
 ﻿using System.Text.RegularExpressions;
-using DataShareHub.Services.Common;
+using TwseDataHub.Services.Common;
 using LC.Models.Contexts;
 using LC.Models.Entities;
 
-namespace DataShareHub.Services
+namespace TwseDataHub.Services
 {
     /// <summary>
     /// 處理鄉鎮的服務 - 介面

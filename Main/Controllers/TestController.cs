@@ -1,6 +1,6 @@
 ﻿using LC.Infrastructure.AppSettings;
 
-namespace DataShareHub.Controllers
+namespace TwseDataHub.Controllers
 {
     /// <summary>
     /// Controller

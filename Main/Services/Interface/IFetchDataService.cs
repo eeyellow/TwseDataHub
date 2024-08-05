@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace DataShareHub.Services
+namespace TwseDataHub.Services
 {
     /// <summary>
     /// 由外部取得資料的排程 - 介面

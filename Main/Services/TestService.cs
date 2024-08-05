@@ -1,4 +1,4 @@
-﻿namespace DataShareHub.Services
+﻿namespace TwseDataHub.Services
 {
     /// <summary>
     /// Represents the interface for the test service.
